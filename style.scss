@@ -6,15 +6,27 @@
     box-sizing: border-box;
     font-family: 'Roboto Mono', monospace;
 }
+// variables
+    $text-dark:  #1b1b32;
+    $text-light: #fff;
+    $background-light: #d0d0d5;
+    $background-dark: #0a0a23;
+    $fcc-light: #d0d0d5;
+    $fcc-dark: #1b1b32;
 
+// end of variables
+body {
+    overflow-x: hidden;
+
+}
 .container {
     width: 100vw;
     height: 100%;
     // background-color: #f5f6f7;
     // navbar
     nav {
-        background-color: #0a0a23;
-        color: #fff;
+        background-color: $background-dark;
+        color: $text-light;
         width: 100%;
         height: 7vh;
         display: flex;
@@ -23,6 +35,7 @@
         padding: 0 5vw;
         position: fixed;
         top: 0;
+        z-index: 1;
 
         .search-bar {
             @media (max-width: 768px) {
@@ -134,7 +147,7 @@
             font-size: 1.5em;
             padding: 5vh 0;
             font-weight: 600;
-            color: #1b1b32;
+            color: $text-dark;
         }
 
         a {
@@ -142,12 +155,12 @@
             margin: .5em auto;
             padding: 1em 0;
             border: 3px solid #1b1b32;
-            background-color: #d0d0d5;
+            background-color: $background-light;
             text-decoration: none;
             font-size: 1.2em;
             font-weight: 500;
             width: 40%;
-            color: #1b1b32;
+            color: $fcc-dark;
             @media (max-width: 768px) {
                 width: 100%;
                 padding: 1em 1.5em;
@@ -160,5 +173,44 @@
         }
     }
     // end of header 
+    // item grid
+    #item-grid {
+        // border: 2px solid navy;
+        border: none;
+        height: auto;
+        // height: 100vh;
+        margin: 5vh 5vw;
+        padding: 1em 10vw;
+        background-color:#f4f4f4;
 
+        .item {
+            background-color: #d8d7d7;
+            text-align: center;
+            border: 3px solid #000;
+            margin: 1em 0;
+            padding: .5em 0;
+
+            p {
+                margin: .5em 0;
+            }
+
+            a {
+                border: none;
+                padding: .3em 1em;
+                text-decoration: none;
+                background-color: $background-dark;
+                color: $text-light;
+                font-weight: 500;
+                border-radius: 3px;
+                text-transform: uppercase;
+
+                &:hover {
+                    background-color: $text-light;
+                    color: $text-dark;
+                    border: 2px solid $text-dark;
+                }
+            }
+        }
+    }
+    // end of item grid
 }
