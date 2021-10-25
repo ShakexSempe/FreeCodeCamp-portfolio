@@ -7,8 +7,8 @@
 
 .container {
   width: 100vw;
-  background-color: skyblue; }
-  .container header {
+  height: 100%; }
+  .container nav {
     background-color: #0a0a23;
     color: #fff;
     width: 100%;
@@ -16,18 +16,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1em;
+    padding: 0 5vw;
     position: fixed;
     top: 0; }
-    .container header .search-bar {
+    .container nav .search-bar {
       background-color: red;
       width: 25%;
       padding: 0;
       position: relative; }
       @media (max-width: 768px) {
-        .container header .search-bar {
+        .container nav .search-bar {
           display: none; } }
-      .container header .search-bar input {
+      .container nav .search-bar input {
         width: 100%;
         width: 100%;
         padding: .4em 2em;
@@ -35,54 +35,84 @@
         color: #fff;
         font-size: 1.1em;
         text-transform: capitalize; }
-      .container header .search-bar i {
+      .container nav .search-bar i {
         position: absolute;
         top: 50%;
         left: .5em;
         transform: translateY(-50%);
         color: #ddd; }
-    .container header .brand-logo {
+    .container nav .brand-logo {
       left: 50%;
       transform: translateX(-50%);
       font-size: 2em;
-      font-weight: 200;
+      font-weight: 300;
       display: flex;
       align-items: center; }
       @media (max-width: 1024px) {
-        .container header .brand-logo {
+        .container nav .brand-logo {
           transform: translateX(0);
           font-size: 1em; } }
-      .container header .brand-logo i {
-        margin-left: .3em; }
-    .container header .menu-profile {
+      .container nav .brand-logo i {
+        margin-left: .3em;
+        font-size: 1.3em; }
+    .container nav .menu-profile {
       background-color: transparent;
       display: flex;
       justify-content: space-between;
       width: auto;
       padding: .3em; }
       @media (max-width: 768px) {
-        .container header .menu-profile {
+        .container nav .menu-profile {
           position: absolute;
-          right: 0; } }
-      .container header .menu-profile button {
+          right: 5vw; } }
+      .container nav .menu-profile button {
         display: block;
         height: 100%;
         padding: 0 1em;
         margin-right: 1em;
         text-transform: capitalize;
         font-size: 1.1em;
-        font-weight: 600;
+        font-weight: 500;
         background-color: transparent;
         border: 3px solid #fff;
         color: #fff;
         cursor: pointer; }
-      .container header .menu-profile .profile {
+      .container nav .menu-profile .profile {
         height: 5vh;
         cursor: pointer; }
-        .container header .menu-profile .profile figure {
+        .container nav .menu-profile .profile figure {
           height: 100%;
           width: 100%;
           outline: 3px solid #d8d7d7; }
-          .container header .menu-profile .profile figure img {
+          .container nav .menu-profile .profile figure img {
             height: 100%;
             width: 100%; }
+  .container header {
+    position: relative;
+    top: 6vh;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 0vh 5vw 5vh; }
+    .container header h1 {
+      font-size: 1.5em;
+      padding: 5vh 0;
+      font-weight: 600;
+      color: #1b1b32; }
+    .container header a {
+      display: block;
+      margin: .5em auto;
+      padding: 1em 0;
+      border: 3px solid #1b1b32;
+      background-color: #d0d0d5;
+      text-decoration: none;
+      font-size: 1.2em;
+      font-weight: 500;
+      width: 40%;
+      color: #1b1b32; }
+      @media (max-width: 768px) {
+        .container header a {
+          width: 100%;
+          padding: 1em 1.5em; } }
+      .container header a:hover {
+        background-color: #1b1b32;
+        color: #d0d0d5; }
