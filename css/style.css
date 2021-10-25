@@ -126,12 +126,15 @@ body {
     margin: 5vh 5vw;
     padding: 1em 10vw;
     background-color: #f4f4f4; }
+    @media (max-width: 768px) {
+      .container #item-grid {
+        padding: 1em 5vw; } }
     .container #item-grid .item {
       background-color: #d8d7d7;
       text-align: center;
       border: 3px solid #000;
       margin: 1em 0;
-      padding: .5em 0; }
+      padding: .5em 0 1em; }
       .container #item-grid .item p {
         margin: .5em 0; }
       .container #item-grid .item a {
