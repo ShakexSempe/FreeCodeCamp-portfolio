@@ -45,6 +45,7 @@ body {
             width: 25%;
             padding: 0;
             position: relative;
+            cursor: pointer;
             input {
                 width: 100%;
                 width: 100%;
@@ -73,6 +74,7 @@ body {
             font-weight: 300;
             display: flex;
             align-items: center;
+            cursor: pointer;
             @media(max-width: 1024px) {
                 transform: translateX(0);
                 font-size: 1em;
@@ -190,7 +192,7 @@ body {
         .item {
             background-color: #d8d7d7;
             text-align: center;
-            border: 3px solid $fcc-dark;
+            outline: 3px solid $fcc-dark;
             margin: 1em 0 5vh;
             padding: 0 0 1em;
             height: 25vh;
@@ -201,9 +203,10 @@ body {
                 background: $background-dark;
                 padding: 1em 0;
                 color: $text-light;
-                transition: 1s ease;
+                transition: .5s ease;
                 p {
                     color: $text-light;
+                    font-weight: 300;
                 }
             }
             a {
@@ -254,6 +257,13 @@ body {
             }
             }
             // item hover state
+            &:hover {
+                transition: .3s;
+                transform: scale(.985);
+                .title {
+                    background-color: $fcc-dark;
+                }
+            }
             &.active {
                 height: auto;
                 transition: .5s ease;
@@ -287,4 +297,12 @@ body {
         }
     }
     // end of item grid
+
+    footer {
+        background-color: $background-dark;
+        color: $text-light;
+        text-align: center;
+        padding: 5vh 0;
+        text-transform: capitalize;
+    }
 }
