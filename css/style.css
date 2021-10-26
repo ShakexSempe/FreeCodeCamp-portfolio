@@ -135,13 +135,18 @@ body {
       text-align: center;
       border: 3px solid #1b1b32;
       margin: 1em 0 5vh;
-      padding: .5em 0 1em;
-      height: 15vh;
+      padding: 0 0 1em;
+      height: 25vh;
       overflow: hidden;
       transition: 1s;
       cursor: pointer; }
-      .container #item-grid .item p {
-        margin: .5em 0; }
+      .container #item-grid .item .title {
+        background: #0a0a23;
+        padding: 1em 0;
+        color: #fff;
+        transition: 1s ease; }
+        .container #item-grid .item .title p {
+          color: #fff; }
       .container #item-grid .item a {
         border: none;
         padding: .3em 1em;
@@ -172,7 +177,13 @@ body {
             transition: .5s; }
       .container #item-grid .item.active {
         height: auto;
-        transition: 1s; }
+        transition: .5s ease; }
+        .container #item-grid .item.active .title {
+          background-color: #d0d0d5; }
+          .container #item-grid .item.active .title h2 {
+            color: #1b1b32; }
+          .container #item-grid .item.active .title p {
+            color: #1b1b32; }
         .container #item-grid .item.active .link {
           transition: 1s;
           opacity: 1; }
