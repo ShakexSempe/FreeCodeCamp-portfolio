@@ -181,7 +181,7 @@ body {
         // height: 100vh;
         margin: 5vh 5vw;
         padding: 1em 10vw;
-        background-color:#f4f4f4;
+        background-color:$fcc-dark;
         @media (max-width: 768px) {
             padding: 1em 5vw;
         }
@@ -189,9 +189,11 @@ body {
         .item {
             background-color: #d8d7d7;
             text-align: center;
-            border: 3px solid #000;
-            margin: 1em 0;
+            border: 3px solid #ffff;
+            margin: 1em 0 5vh;
             padding: .5em 0 1em;
+            height: auto;
+            transition: 1s;
 
             p {
                 margin: .5em 0;
@@ -200,6 +202,7 @@ body {
             a {
                 border: none;
                 padding: .3em 1em;
+                margin: 1em 0;
                 text-decoration: none;
                 background-color: $background-dark;
                 color: $text-light;
@@ -213,6 +216,43 @@ body {
                     border: 2px solid $text-dark;
                 }
             }
+            .link {
+                margin:  1em 0 .5em;
+                
+                figure {
+                    // display: none;
+                    margin-bottom: 5vh;
+                    height: auto;
+                    position: relative;
+                    transition: .5s;
+                // &::after {
+                //     position: absolute;
+                //     content: '';
+                //     top: 0;
+                //     left: 0;
+                //     width: 100%;
+                //     height: 100%;
+                //     background-color: rgba(0, 0, 0, 0.704);
+                // }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    transition: .5s;
+                    // object-fit: contain;
+                    
+                }
+            }
+            }
+            // item hover state
+            &:hover {
+                .link {
+                    figure {
+                        height: auto;
+                        // display: block;
+                    }
+                }
+            }
+            // end of item hover state
         }
     }
     // end of item grid
