@@ -125,14 +125,14 @@ body {
     height: auto;
     margin: 5vh 5vw;
     padding: 1em 10vw;
-    background-color: #1b1b32; }
+    background-color: #d0d0d5; }
     @media (max-width: 768px) {
       .container #item-grid {
         padding: 1em 5vw; } }
     .container #item-grid .item {
       background-color: #d8d7d7;
       text-align: center;
-      border: 3px solid #ffff;
+      border: 3px solid #1b1b32;
       margin: 1em 0 5vh;
       padding: .5em 0 1em;
       height: auto;

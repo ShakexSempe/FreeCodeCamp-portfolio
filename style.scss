@@ -181,7 +181,7 @@ body {
         // height: 100vh;
         margin: 5vh 5vw;
         padding: 1em 10vw;
-        background-color:$fcc-dark;
+        background-color:$fcc-light;
         @media (max-width: 768px) {
             padding: 1em 5vw;
         }
@@ -189,7 +189,7 @@ body {
         .item {
             background-color: #d8d7d7;
             text-align: center;
-            border: 3px solid #ffff;
+            border: 3px solid $fcc-dark;
             margin: 1em 0 5vh;
             padding: .5em 0 1em;
             height: auto;
