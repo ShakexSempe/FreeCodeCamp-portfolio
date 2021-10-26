@@ -70,7 +70,7 @@ body {
             // position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 2em;
+            font-size: 1.8em;
             font-weight: 300;
             display: flex;
             align-items: center;
@@ -141,12 +141,12 @@ body {
         position: relative;
         top: 6vh;
         text-align: center;
-        text-transform: capitalize;
         // background-color: skyblue;
         padding: 0vh 5vw 5vh;
-
+        
         h1 {
-            font-size: 1.5em;
+            font-size: 1.8em;
+            text-transform: capitalize;
             padding: 5vh 0;
             font-weight: 600;
             color: $text-dark;
@@ -159,7 +159,7 @@ body {
             border: 3px solid #1b1b32;
             background-color: $background-light;
             text-decoration: none;
-            font-size: 1.2em;
+            font-size: 1.4em;
             font-weight: 500;
             width: 40%;
             color: $fcc-dark;
@@ -181,10 +181,9 @@ body {
         border: none;
         min-height: 100vh;
         overflow: hidden;
-        // height: 100vh;
         margin: 5vh 5vw;
         padding: 1em 10vw;
-        background-color:$fcc-light;
+        // background-color:$fcc-light;
         @media (max-width: 768px) {
             padding: 1em 5vw;
         }
@@ -212,7 +211,7 @@ body {
             a {
                 border: none;
                 padding: .3em 1em;
-                margin: 1em 0;
+                margin: 5vh 0;
                 text-decoration: none;
                 background-color: $background-dark;
                 color: $text-light;
@@ -234,7 +233,7 @@ body {
                 
                 figure {
                     // display: none;
-                    margin-bottom: 5vh;
+                    margin: 5vh 0;
                     height: auto;
                     position: relative;
                     transition: .5s;

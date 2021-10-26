@@ -49,7 +49,7 @@ body {
     .container nav .brand-logo {
       left: 50%;
       transform: translateX(-50%);
-      font-size: 2em;
+      font-size: 1.8em;
       font-weight: 300;
       display: flex;
       align-items: center;
@@ -97,10 +97,10 @@ body {
     position: relative;
     top: 6vh;
     text-align: center;
-    text-transform: capitalize;
     padding: 0vh 5vw 5vh; }
     .container header h1 {
-      font-size: 1.5em;
+      font-size: 1.8em;
+      text-transform: capitalize;
       padding: 5vh 0;
       font-weight: 600;
       color: #1b1b32; }
@@ -111,7 +111,7 @@ body {
       border: 3px solid #1b1b32;
       background-color: #d0d0d5;
       text-decoration: none;
-      font-size: 1.2em;
+      font-size: 1.4em;
       font-weight: 500;
       width: 40%;
       color: #1b1b32; }
@@ -127,8 +127,7 @@ body {
     min-height: 100vh;
     overflow: hidden;
     margin: 5vh 5vw;
-    padding: 1em 10vw;
-    background-color: #d0d0d5; }
+    padding: 1em 10vw; }
     @media (max-width: 768px) {
       .container #item-grid {
         padding: 1em 5vw; } }
@@ -153,7 +152,7 @@ body {
       .container #item-grid .item a {
         border: none;
         padding: .3em 1em;
-        margin: 1em 0;
+        margin: 5vh 0;
         text-decoration: none;
         background-color: #0a0a23;
         color: #fff;
@@ -170,7 +169,7 @@ body {
         opacity: 0;
         margin: 1em 0 .5em; }
         .container #item-grid .item .link figure {
-          margin-bottom: 5vh;
+          margin: 5vh 0;
           height: auto;
           position: relative;
           transition: .5s; }
