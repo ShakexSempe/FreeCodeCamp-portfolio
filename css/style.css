@@ -157,7 +157,7 @@ body {
       outline-offset: -3px;
       margin: 1em 0 5vh;
       padding: 0 0 1em;
-      height: 25vh;
+      height: auto;
       transition: 1s;
       cursor: pointer; }
       .container #item-grid .item .title {
@@ -186,6 +186,7 @@ body {
           color: #1b1b32;
           border: 2px solid #1b1b32; }
       .container #item-grid .item .link {
+        display: none;
         opacity: 0;
         margin: 1em 0 .5em; }
         .container #item-grid .item .link figure {
@@ -213,6 +214,7 @@ body {
           .container #item-grid .item.active .title p {
             color: #1b1b32; }
         .container #item-grid .item.active .link {
+          display: block;
           transition: 1s;
           opacity: 1; }
           .container #item-grid .item.active .link figure {
