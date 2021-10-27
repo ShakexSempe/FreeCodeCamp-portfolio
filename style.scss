@@ -196,10 +196,13 @@ body {
     // end of header 
     article {
         text-align: center;
-        margin: 5vh 0;
+        margin: 5vh 20vw;
         text-transform: capitalize;
         color: $fcc-dark;
         font-size: 1.3em;
+        @media (max-width: 768px) {
+            margin: 5vh 5vw;
+        }
 
         span {
             display: block;
