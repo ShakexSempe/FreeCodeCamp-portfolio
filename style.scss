@@ -67,7 +67,7 @@ body {
 
         // brand logo
         .brand-logo {
-            // position: absolute;
+            position: absolute;
             left: 50%;
             transform: translateX(-50%);
             font-size: 1.8em;
@@ -75,9 +75,15 @@ body {
             display: flex;
             align-items: center;
             cursor: pointer;
-            @media(max-width: 1024px) {
+            width: 20%;
+            img {
+                width: 100%;
+            }
+            @media(max-width: 768px) {
                 transform: translateX(0);
-                font-size: 1em;
+                font-size: 1.25em;
+                width: 50%;
+                left: 5vw;
             }
 
             i {
@@ -98,22 +104,27 @@ body {
             @media (max-width: 768px) {
                 position: absolute;
                 right: 5vw;
+                padding: 0;
+                .profile {
+                    display: none;
+                }
             }
             
             button {
                 display: block;
                 height: 100%;
-                padding: 0 1em;
+                padding: .1em .8em;
                 margin-right: 1em;
-                // margin-right: 1em;
                 text-transform: capitalize;
-                font-size: 1.1em;
+                font-size: 1.25em;
                 font-weight: 500;
                 background-color: transparent;
-                border: 3px solid #fff;
+                border: 1px solid #fff;
                 color: #fff;
                 cursor: pointer;
-
+                @media (max-width: 768px) {
+                    margin: 0;
+                }
             }
 
             .profile {
@@ -182,16 +193,17 @@ body {
         min-height: 100vh;
         overflow: hidden;
         margin: 5vh 5vw;
-        padding: 1em 10vw;
+        padding: 1em 0;
         // background-color:$fcc-light;
         @media (max-width: 768px) {
-            padding: 1em 5vw;
+            padding: 1em 0;
         }
 
         .item {
             background-color: #d8d7d7;
             text-align: center;
             outline: 3px solid $fcc-dark;
+
             margin: 1em 0 5vh;
             padding: 0 0 1em;
             height: 25vh;

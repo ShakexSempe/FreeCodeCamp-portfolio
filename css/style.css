@@ -47,17 +47,23 @@ body {
         transform: translateY(-50%);
         color: #ddd; }
     .container nav .brand-logo {
+      position: absolute;
       left: 50%;
       transform: translateX(-50%);
       font-size: 1.8em;
       font-weight: 300;
       display: flex;
       align-items: center;
-      cursor: pointer; }
-      @media (max-width: 1024px) {
+      cursor: pointer;
+      width: 20%; }
+      .container nav .brand-logo img {
+        width: 100%; }
+      @media (max-width: 768px) {
         .container nav .brand-logo {
           transform: translateX(0);
-          font-size: 1em; } }
+          font-size: 1.25em;
+          width: 50%;
+          left: 5vw; } }
       .container nav .brand-logo i {
         margin-left: .3em;
         font-size: 1.3em; }
@@ -70,19 +76,25 @@ body {
       @media (max-width: 768px) {
         .container nav .menu-profile {
           position: absolute;
-          right: 5vw; } }
+          right: 5vw;
+          padding: 0; }
+          .container nav .menu-profile .profile {
+            display: none; } }
       .container nav .menu-profile button {
         display: block;
         height: 100%;
-        padding: 0 1em;
+        padding: .1em .8em;
         margin-right: 1em;
         text-transform: capitalize;
-        font-size: 1.1em;
+        font-size: 1.25em;
         font-weight: 500;
         background-color: transparent;
-        border: 3px solid #fff;
+        border: 1px solid #fff;
         color: #fff;
         cursor: pointer; }
+        @media (max-width: 768px) {
+          .container nav .menu-profile button {
+            margin: 0; } }
       .container nav .menu-profile .profile {
         height: 5vh;
         cursor: pointer; }
@@ -127,10 +139,10 @@ body {
     min-height: 100vh;
     overflow: hidden;
     margin: 5vh 5vw;
-    padding: 1em 10vw; }
+    padding: 1em 0; }
     @media (max-width: 768px) {
       .container #item-grid {
-        padding: 1em 5vw; } }
+        padding: 1em 0; } }
     .container #item-grid .item {
       background-color: #d8d7d7;
       text-align: center;
