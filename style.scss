@@ -13,6 +13,7 @@
     $background-dark: #0a0a23;
     $fcc-light: #d0d0d5;
     $fcc-dark: #1b1b32;
+    $fcc-gray-05: #f5f6f7;
 
 // end of variables
 body {
@@ -22,7 +23,7 @@ body {
 .container {
     width: 100vw;
     height: 100%;
-    // background-color: #f5f6f7;
+    background-color: #f5f6f7;
     // navbar
     nav {
         background-color: $background-dark;
@@ -193,6 +194,19 @@ body {
         }
     }
     // end of header 
+    article {
+        text-align: center;
+        margin: 5vh 0;
+        text-transform: capitalize;
+        color: $fcc-dark;
+        font-size: 1.3em;
+
+        span {
+            display: block;
+            color: #88888a;
+            font-style: italic;
+        }
+    }
     // item grid
     #item-grid {
         // border: 2px solid navy;
@@ -208,7 +222,7 @@ body {
         }
 
         .item {
-            background-color: $background-dark;
+            background-color: $background-light;
             text-align: center;
             outline: 3px solid $fcc-dark;
             outline-offset: -3px;
@@ -226,7 +240,7 @@ body {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: $background-dark;
+                background-color: $background-light;
                 z-index: -1;
             }
             &::after {
@@ -241,13 +255,16 @@ body {
                 z-index: -1;
             }
             .title {
-                background: $background-dark;
+                background: $background-light;
                 padding: 1em 0;
-                color: $text-light;
+                color: $text-dark;
                 transition: .5s ease;
+
                 p {
-                    color: $text-light;
-                    font-weight: 300;
+                    transition: .5s ease;
+
+                    color: $text-dark;
+                    font-weight: 400;
                 }
             }
             a {
@@ -304,9 +321,14 @@ body {
             }
             // item hover state
             &:hover {
-                transition: .3s;
+                // transition: .3s;
                 .title {
                     background-color: $fcc-dark;
+                    color: $text-light;
+
+                    p {
+                        color: $text-light;
+                    }
                 }
             }
             &.active {
