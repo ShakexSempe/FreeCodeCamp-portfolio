@@ -111,26 +111,32 @@ body {
     text-align: center;
     padding: 0vh 5vw 5vh; }
     .container header h1 {
-      font-size: 1.8em;
+      font-size: 1.5em;
       text-transform: capitalize;
       padding: 5vh 0;
       font-weight: 600;
       color: #1b1b32; }
+      @media (min-width: 1024px) {
+        .container header h1 {
+          font-size: 1.8em; } }
+      .container header h1 span {
+        display: block; }
     .container header a {
       display: block;
       margin: .5em auto;
-      padding: 1em 0;
+      padding: .5em 0;
       border: 3px solid #1b1b32;
       background-color: #d0d0d5;
       text-decoration: none;
       font-size: 1.4em;
       font-weight: 500;
       width: 40%;
-      color: #1b1b32; }
+      color: #1b1b32;
+      transition: .3s ease; }
       @media (max-width: 768px) {
         .container header a {
           width: 100%;
-          padding: 1em 1.5em; } }
+          padding: .5em 1em; } }
       .container header a:hover {
         background-color: #1b1b32;
         color: #d0d0d5; }
@@ -138,19 +144,20 @@ body {
     border: none;
     min-height: 100vh;
     overflow: hidden;
-    margin: 5vh 5vw;
+    margin: 5vh 20vw;
     padding: 1em 0; }
     @media (max-width: 768px) {
       .container #item-grid {
-        padding: 1em 0; } }
+        padding: 1em 0;
+        margin: 5vh 5vw; } }
     .container #item-grid .item {
       background-color: #d8d7d7;
       text-align: center;
       outline: 3px solid #1b1b32;
+      outline-offset: -3px;
       margin: 1em 0 5vh;
       padding: 0 0 1em;
       height: 25vh;
-      overflow: hidden;
       transition: 1s;
       cursor: pointer; }
       .container #item-grid .item .title {
@@ -171,7 +178,7 @@ body {
         font-weight: 500;
         border-radius: 3px;
         text-transform: uppercase;
-        opacity: 0;
+        opacity: 1;
         transition: .5s; }
         .container #item-grid .item a:hover {
           background-color: #fff;
@@ -182,6 +189,8 @@ body {
         margin: 1em 0 .5em; }
         .container #item-grid .item .link figure {
           margin: 5vh 0;
+          padding: 3px;
+          overflow: hidden;
           height: auto;
           position: relative;
           transition: .5s; }
@@ -190,8 +199,7 @@ body {
             height: 100%;
             transition: .5s; }
       .container #item-grid .item:hover {
-        transition: .3s;
-        transform: scale(0.985); }
+        transition: .3s; }
         .container #item-grid .item:hover .title {
           background-color: #1b1b32; }
       .container #item-grid .item.active {

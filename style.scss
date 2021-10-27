@@ -156,17 +156,23 @@ body {
         padding: 0vh 5vw 5vh;
         
         h1 {
-            font-size: 1.8em;
+            font-size: 1.5em;
             text-transform: capitalize;
             padding: 5vh 0;
             font-weight: 600;
             color: $text-dark;
+            @media (min-width: 1024px) {
+                font-size: 1.8em;
+            }
+            span {
+                display: block;
+            }
         }
 
         a {
             display: block;
             margin: .5em auto;
-            padding: 1em 0;
+            padding: .5em 0;
             border: 3px solid #1b1b32;
             background-color: $background-light;
             text-decoration: none;
@@ -174,9 +180,10 @@ body {
             font-weight: 500;
             width: 40%;
             color: $fcc-dark;
+            transition: .3s ease;
             @media (max-width: 768px) {
                 width: 100%;
-                padding: 1em 1.5em;
+                padding: .5em 1em;
             }
             &:hover {
                 background-color: #1b1b32;
@@ -192,22 +199,22 @@ body {
         border: none;
         min-height: 100vh;
         overflow: hidden;
-        margin: 5vh 5vw;
+        margin: 5vh 20vw;
         padding: 1em 0;
         // background-color:$fcc-light;
         @media (max-width: 768px) {
             padding: 1em 0;
+            margin: 5vh 5vw;
         }
 
         .item {
             background-color: #d8d7d7;
             text-align: center;
             outline: 3px solid $fcc-dark;
-
+            outline-offset: -3px;
             margin: 1em 0 5vh;
             padding: 0 0 1em;
             height: 25vh;
-            overflow: hidden;
             transition: 1s;
             cursor: pointer;
             .title {
@@ -230,7 +237,7 @@ body {
                 font-weight: 500;
                 border-radius: 3px;
                 text-transform: uppercase;
-                opacity: 0;
+                opacity: 1;
                 transition: .5s;
 
                 &:hover {
@@ -246,6 +253,8 @@ body {
                 figure {
                     // display: none;
                     margin: 5vh 0;
+                    padding: 3px;
+                    overflow: hidden;
                     height: auto;
                     position: relative;
                     transition: .5s;
@@ -270,7 +279,6 @@ body {
             // item hover state
             &:hover {
                 transition: .3s;
-                transform: scale(.985);
                 .title {
                     background-color: $fcc-dark;
                 }
