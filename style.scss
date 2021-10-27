@@ -232,10 +232,14 @@ body {
             margin: 1em 0 5vh;
             padding: 0 0 1em;
             height: 15vh;
+            overflow: hidden;
             transition: 1s;
             cursor: pointer;
             position:relative;
             isolation: isolate;
+            @media (max-width: 768px){
+                height: 20vh;
+            }
             &::before {
                 position: absolute;
                 content: '';
