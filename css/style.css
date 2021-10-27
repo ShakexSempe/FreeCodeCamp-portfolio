@@ -179,7 +179,8 @@ body {
         border-radius: 3px;
         text-transform: uppercase;
         opacity: 1;
-        transition: .5s; }
+        transition: .5s;
+        pointer-events: none; }
         .container #item-grid .item a:hover {
           background-color: #fff;
           color: #1b1b32;
@@ -219,7 +220,8 @@ body {
             opacity: 1;
             transition-delay: .5s; }
           .container #item-grid .item.active .link a {
-            opacity: 1; }
+            opacity: 1;
+            pointer-events: visible; }
   .container footer {
     background-color: #0a0a23;
     color: #fff;

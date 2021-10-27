@@ -239,6 +239,7 @@ body {
                 text-transform: uppercase;
                 opacity: 1;
                 transition: .5s;
+                pointer-events: none;
 
                 &:hover {
                     background-color: $text-light;
@@ -248,6 +249,7 @@ body {
             }
             .link {
                 opacity: 0;
+                // pointer-events: none;
                 margin:  1em 0 .5em;
                 
                 figure {
@@ -308,6 +310,7 @@ body {
                     }
                     a {
                         opacity: 1;
+                        pointer-events: visible;
                         // transition-delay: .5s;
                     }
                 }
