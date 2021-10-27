@@ -143,13 +143,13 @@ body {
         color: #d0d0d5; }
   .container article {
     text-align: center;
-    margin: 5vh 20vw;
+    margin: 5vh 10vw;
     text-transform: capitalize;
     color: #1b1b32;
     font-size: 1.3em; }
     @media (max-width: 768px) {
       .container article {
-        margin: 5vh 5vw; } }
+        margin: 5vh 10vw; } }
     .container article span {
       display: block;
       color: #88888a;
