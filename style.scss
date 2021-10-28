@@ -155,28 +155,28 @@ body {
     // header 
     header {
         position: relative;
-        top: 6vh;
+        top: 10vh;
         text-align: center;
         // background-color: skyblue;
         padding: 0vh 5vw 5vh;
         
         h1 {
-            font-size: 1.5em;
+            font-size: 2em;
             text-transform: capitalize;
-            padding: 5vh 0;
+            padding: .5em 0;
             font-weight: 600;
             color: $text-dark;
-            @media (min-width: 1024px) {
-                font-size: 1.8em;
+            @media (max-width: 768px) {
+                font-size: 1.5em;
             }
-            span {
-                display: block;
-            }
+            // span {
+            //     display: block;
+            // }
         }
 
         a {
             display: block;
-            margin: .5em auto;
+            margin: 1em auto;
             padding: .5em 0;
             border: 3px solid #1b1b32;
             background-color: $background-light;
@@ -203,7 +203,7 @@ body {
         margin: 5vh 10vw;
         text-transform: capitalize;
         color: $fcc-dark;
-        font-size: 1.3em;
+        font-size: 1.5em;
         @media (max-width: 768px) {
             margin: 5vh 10vw;
         }
