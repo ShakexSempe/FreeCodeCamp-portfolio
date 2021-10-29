@@ -180,7 +180,7 @@ body {
       isolation: isolate; }
       @media (max-width: 768px) {
         .container #item-grid .item {
-          height: 20vh; } }
+          height: auto; } }
       .container #item-grid .item::before {
         position: absolute;
         content: '';
@@ -205,6 +205,32 @@ body {
         padding: 1em 0;
         color: #1b1b32;
         transition: .5s ease; }
+        .container #item-grid .item .title::after, .container #item-grid .item .title::before {
+          position: absolute;
+          font-family: 'Font Awesome 6 Free';
+          top: 50%;
+          transform: translateY(-50%);
+          left: 1em;
+          color: #1b1b32;
+          font-weight: 600;
+          font-size: 2em; }
+        @media (max-width: 768px) {
+          .container #item-grid .item .title {
+            text-align: left;
+            padding-left: 20%; }
+            .container #item-grid .item .title::before, .container #item-grid .item .title::after {
+              font-size: 1.5em;
+              top: 2em;
+              left: .5em;
+              transition: .2s ease; } }
+        .container #item-grid .item .title::before {
+          content: '\f108';
+          opacity: 1; }
+        .container #item-grid .item .title::after {
+          content: '\f3cd';
+          opacity: 0;
+          font-size: 1.6em;
+          color: #fff; }
         .container #item-grid .item .title p {
           transition: .5s ease;
           color: #1b1b32;
@@ -244,6 +270,10 @@ body {
       .container #item-grid .item:hover .title {
         background-color: #1b1b32;
         color: #fff; }
+        .container #item-grid .item:hover .title::before {
+          opacity: 0; }
+        .container #item-grid .item:hover .title::after {
+          opacity: 1; }
         .container #item-grid .item:hover .title p {
           color: #fff; }
       .container #item-grid .item.active {
@@ -255,6 +285,8 @@ body {
           opacity: 1; }
         .container #item-grid .item.active .title {
           background-color: #d0d0d5; }
+          .container #item-grid .item.active .title::after {
+            color: #1b1b32; }
           .container #item-grid .item.active .title h2 {
             color: #1b1b32; }
           .container #item-grid .item.active .title p {
