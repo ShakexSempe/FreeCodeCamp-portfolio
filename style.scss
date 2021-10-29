@@ -7,8 +7,13 @@
 }
 // variables
     $text-dark:  #1b1b32;
+    $text-gray:#0a0a23;
     $text-light: #fff;
+    $text-gray-05: #f5f6f7;
+    $text-gray-10: #dfdfe2;
+    $text-gray-75:#3b3b4f;
     $background-light: #d0d0d5;
+    $background-gray: #d0d0d5;
     $background-dark: #0a0a23;
     $fcc-light: #d0d0d5;
     $fcc-dark: #1b1b32;
@@ -28,7 +33,7 @@ body {
         background-color: $background-dark;
         color: $text-light;
         width: 100%;
-        height: 7vh;
+        height: 6vh;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -42,18 +47,22 @@ body {
                 display: none;
             }
             background-color: red;
-            width: 25%;
+            width: 30%;
             padding: 0;
             position: relative;
             cursor: pointer;
             input {
                 width: 100%;
-                width: 100%;
-                padding: .4em 2em;
+                height: 100%;
+                padding: 0 2em;
                 background-color: #3b3b4f;
                 color: #fff;
                 font-size: 1.1em;
                 text-transform: capitalize;
+                &::placeholder {
+                    color: $text-gray-10;
+                    font-weight: 300;
+                }
             }
             i {
                 position: absolute;
@@ -70,7 +79,7 @@ body {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 1.8em;
+            font-size: 1.85em;
             font-weight: 100;
             display: flex;
             align-items: center;
@@ -79,14 +88,14 @@ body {
 
             p {
                 font-family: 'PT Mono', monospace;
-                color: $text-light;
+                color: $text-gray-10;
             }
             img {
                 width: 100%;
             }
             @media(max-width: 768px) {
                 transform: translateX(0);
-                font-size: 1.35em;
+                font-size: 1.4em;
                 width: 50%;
                 left: 5vw;
             }
@@ -188,7 +197,7 @@ body {
             transition: .3s ease;
             @media (max-width: 768px) {
                 width: 100%;
-                padding: .5em 1em;
+                padding:  1em;
             }
             &:hover {
                 background-color: #1b1b32;
@@ -200,7 +209,7 @@ body {
     // end of header 
     article {
         text-align: center;
-        margin: 5vh 10vw;
+        margin: 2em 10vw;
         text-transform: capitalize;
         color: $fcc-dark;
         font-size: 1.5em;
@@ -231,11 +240,11 @@ body {
         .item {
             background-color: $background-light;
             text-align:center;
-            outline: 4px solid $fcc-dark;
+            outline: 3px solid $fcc-dark;
             outline-offset: -3px;
             margin: 1em 0 5vh;
             padding: 0 0 1em;
-            height: 15vh;
+            height: auto;
             overflow: hidden;
             transition: 1s;
             cursor: pointer;
@@ -270,6 +279,8 @@ body {
                 padding: 1em 0;
                 color: $text-dark;
                 transition: .5s ease;
+                text-transform: capitalize;
+                line-height: 1.5;
                 // title icon
                 &::after,
                 &::before {
@@ -302,9 +313,15 @@ body {
                     content: '\f3cd';
                     opacity: 0;
                     font-size: 1.6em;
+                    top: 1.8em;
+                    left: .6em;
                     color: $text-light;
                 }
 
+                h2 {
+                    font-size: 1.4em;
+                    font-weight: 500;
+                }
 
                 p {
                     transition: .5s ease;
@@ -429,10 +446,18 @@ body {
     // end of item grid
 
     footer {
-        background-color: $background-dark;
-        color: $text-light;
+        background-color: $background-gray;
         text-align: center;
+        color: $text-gray;
+        font-weight: 500;
         padding: 5vh 0;
         text-transform: capitalize;
+
+        span {
+            display: block;
+            margin-top: .5em;
+            color: $text-gray-75;
+            font-weight: 400;
+        }
     }
 }
