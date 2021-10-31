@@ -63,8 +63,8 @@ body {
       .container nav .brand-logo p {
         font-family: 'PT Mono', monospace;
         color: #dfdfe2; }
-      .container nav .brand-logo img {
-        width: 100%; }
+      .container nav .brand-logo i {
+        color: #dfdfe2; }
       @media (max-width: 768px) {
         .container nav .brand-logo {
           transform: translateX(0);
@@ -87,7 +87,7 @@ body {
           padding: 0; }
           .container nav .menu-profile .profile {
             display: none; } }
-      .container nav .menu-profile .menu button {
+      .container nav .menu-profile .menu .btn {
         display: block;
         height: 100%;
         padding: 0 .8em;
@@ -98,9 +98,18 @@ body {
         background-color: transparent;
         border: 1px solid #fff;
         color: #fff;
-        cursor: pointer; }
+        cursor: pointer;
+        transition: .3s ease; }
+        .container nav .menu-profile .menu .btn.active {
+          background: #fff;
+          color: #1b1b32;
+          outline: 3px solid #1b1b32;
+          outline-offset: -6px; }
+        .container nav .menu-profile .menu .btn:active {
+          transition: .2s;
+          transform: scale(0.96); }
         @media (max-width: 768px) {
-          .container nav .menu-profile .menu button {
+          .container nav .menu-profile .menu .btn {
             margin: 0;
             padding: .3em 1em; } }
       .container nav .menu-profile .profile {
@@ -114,7 +123,7 @@ body {
             height: 100%;
             width: 100%; }
   .container aside {
-    background: #2a2a40;
+    background: #0a0a23;
     position: absolute;
     top: -100vh;
     left: 0;
@@ -125,8 +134,18 @@ body {
     .container aside h2 {
       margin: 5vh 5vw;
       background: #3b3b4f;
-      padding: 0 .5em;
-      color: #dfdfe2; }
+      padding: .2em 2em;
+      color: #dfdfe2;
+      font-weight: 400;
+      font-size: 1.3em;
+      position: relative; }
+      .container aside h2::before {
+        position: absolute;
+        content: '\f007';
+        font-family: 'Font Awesome 6 Free';
+        left: .5em;
+        top: 50%;
+        transform: translateY(-50%); }
     .container aside.active {
       top: 7vh; }
   .container header {

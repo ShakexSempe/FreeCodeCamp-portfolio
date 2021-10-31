@@ -90,5 +90,7 @@ date.innerHTML = new Date().getFullYear();
 const button = document.querySelector('.menu');
 const aside = document.querySelector('.aside');
 button.addEventListener("click", () => {
+    let btn = document.querySelector('.btn');
     aside.classList.toggle('active');
+    btn.classList.toggle('active');
 })

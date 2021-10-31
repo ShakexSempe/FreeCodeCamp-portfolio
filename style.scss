@@ -91,8 +91,8 @@ body {
                 font-family: 'PT Mono', monospace;
                 color: $text-gray-10;
             }
-            img {
-                width: 100%;
+            i {
+                color: $text-gray-10;
             }
             @media(max-width: 768px) {
                 transform: translateX(0);
@@ -125,7 +125,7 @@ body {
                 }
             }
             .menu {
-            button {
+            .btn {
                 display: block;
                 height: 100%;
                 padding: 0 .8em;
@@ -134,10 +134,29 @@ body {
                 font-size: 1em;
                 font-weight: 500;
                 background-color: transparent;
-                border: 1px solid #fff;
-                color: #fff;
+                // outline: 1px solid $text-dark;
+                // outline-offset: 2px;
+                border: 1px solid $text-light;
+                color: $text-light;
                 cursor: pointer;
+                transition: .3s ease;
 
+                // button hover state
+                &.active{
+                    background: $text-light;
+                    color: $text-dark;
+                    // border: 1px solid $text-dark;
+                    outline: 3px solid $text-dark;;
+                    outline-offset: -6px;
+
+                }
+                // end of button hover state
+                // button active state
+                &:active {
+                    transition: .2s;
+                    transform: scale(.96);
+                }
+                // end of button active state
                 @media (max-width: 768px) {
                     margin: 0;
                     padding: .3em 1em;
@@ -166,7 +185,7 @@ body {
     }
     // end of navbar
     aside {
-        background: $text-gray-80;
+        background: $background-dark;
         position: absolute;
         top: -100vh;
         left: 0;
@@ -178,8 +197,24 @@ body {
         h2 {
             margin: 5vh 5vw;
             background: $text-gray-75;
-            padding: 0 .5em;
+            padding: .2em 2em;
             color: $text-gray-10;
+            font-weight: 400;
+            font-size: 1.3em;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: '\f007';
+                font-family: 'Font Awesome 6 Free';
+                left: .5em;
+                top: 50%;
+                transform: translateY(-50%);
+
+
+                
+
+            }
         }
 
         &.active {
