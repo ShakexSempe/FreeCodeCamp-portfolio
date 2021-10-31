@@ -91,6 +91,7 @@ const button = document.querySelector('.menu');
 const aside = document.querySelector('.aside');
 button.addEventListener("click", () => {
     let btn = document.querySelector('.btn');
+    let brand = 
     aside.classList.toggle('active');
     btn.classList.toggle('active');
 })

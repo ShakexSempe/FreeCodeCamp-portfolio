@@ -62,9 +62,9 @@ body {
       width: 20%; }
       .container nav .brand-logo p {
         font-family: 'PT Mono', monospace;
-        color: #dfdfe2; }
+        color: #f4f4f4; }
       .container nav .brand-logo i {
-        color: #dfdfe2; }
+        color: #f4f4f4; }
       @media (max-width: 768px) {
         .container nav .brand-logo {
           transform: translateX(0);
@@ -124,11 +124,11 @@ body {
             width: 100%; }
   .container aside {
     background: #0a0a23;
-    position: absolute;
+    position: fixed;
     top: -100vh;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     transition: .3s ease;
     z-index: 1; }
     .container aside h2 {
@@ -181,7 +181,7 @@ body {
           padding: 1em; } }
       .container header a:hover {
         background-color: #1b1b32;
-        color: #d0d0d5; }
+        color: #fff; }
   .container article {
     text-align: center;
     margin: 2em 10vw;

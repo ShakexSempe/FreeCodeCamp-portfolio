@@ -10,6 +10,7 @@
     $text-gray:#0a0a23;
     $text-gray-80: #2a2a40;
     $text-light: #fff;
+    $text-light-d: #f4f4f4;
     $text-gray-05: #f5f6f7;
     $text-gray-10: #dfdfe2;
     $text-gray-75:#3b3b4f;
@@ -89,10 +90,10 @@ body {
 
             p {
                 font-family: 'PT Mono', monospace;
-                color: $text-gray-10;
+                color: $text-light-d;
             }
             i {
-                color: $text-gray-10;
+                color: $text-light-d;
             }
             @media(max-width: 768px) {
                 transform: translateX(0);
@@ -184,11 +185,11 @@ body {
     // end of navbar
     aside {
         background: $background-dark;
-        position: absolute;
+        position: fixed;
         top: -100vh;
         left: 0;
         width: 100vw;
-        height: 100vh;
+        min-height: 100vh;
         transition: .3s ease;
         z-index: 1;
 
@@ -260,7 +261,7 @@ body {
             }
             &:hover {
                 background-color: #1b1b32;
-                color: #d0d0d5;
+                color:$text-light;
             }
 
         }
