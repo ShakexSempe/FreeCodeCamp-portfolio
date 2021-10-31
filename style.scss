@@ -124,7 +124,7 @@ body {
                     display: none;
                 }
             }
-            
+            .menu {
             button {
                 display: block;
                 height: 100%;
@@ -137,12 +137,13 @@ body {
                 border: 1px solid #fff;
                 color: #fff;
                 cursor: pointer;
+
                 @media (max-width: 768px) {
                     margin: 0;
                     padding: .3em 1em;
                 }
             }
-
+            }
             .profile {
                 height: 4vh;
                 cursor: pointer;
@@ -161,6 +162,26 @@ body {
             }
         }
         // end of menu-profile
+        aside {
+            background: $text-gray-80;
+            position: absolute;
+            top: -100vh;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            transition: .3s ease;
+
+            h2 {
+                margin: 5vh 5vw;
+                background: $text-gray-75;
+                padding: 0 .5em;
+                color: $text-gray-10;
+            }
+
+            &.active {
+            top: 7vh;
+            }
+        }
     }
     // end of navbar
     // header 

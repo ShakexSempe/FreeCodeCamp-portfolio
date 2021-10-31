@@ -87,7 +87,7 @@ body {
           padding: 0; }
           .container nav .menu-profile .profile {
             display: none; } }
-      .container nav .menu-profile button {
+      .container nav .menu-profile .menu button {
         display: block;
         height: 100%;
         padding: 0 .8em;
@@ -100,7 +100,7 @@ body {
         color: #fff;
         cursor: pointer; }
         @media (max-width: 768px) {
-          .container nav .menu-profile button {
+          .container nav .menu-profile .menu button {
             margin: 0;
             padding: .3em 1em; } }
       .container nav .menu-profile .profile {
@@ -113,6 +113,21 @@ body {
           .container nav .menu-profile .profile figure img {
             height: 100%;
             width: 100%; }
+    .container nav aside {
+      background: #2a2a40;
+      position: absolute;
+      top: -100vh;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      transition: .3s ease; }
+      .container nav aside h2 {
+        margin: 5vh 5vw;
+        background: #3b3b4f;
+        padding: 0 .5em;
+        color: #dfdfe2; }
+      .container nav aside.active {
+        top: 7vh; }
   .container header {
     position: relative;
     top: 10vh;

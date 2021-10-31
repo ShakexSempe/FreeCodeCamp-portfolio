@@ -85,3 +85,10 @@ item.forEach(item => {
 // footer date
 const date = document.getElementById("date");
 date.innerHTML = new Date().getFullYear();
+
+// aside menu 
+const button = document.querySelector('.menu');
+const aside = document.querySelector('.aside');
+button.addEventListener("click", () => {
+    aside.classList.toggle('active');
+})
