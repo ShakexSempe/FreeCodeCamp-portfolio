@@ -141,16 +141,14 @@ body {
                 cursor: pointer;
                 transition: .3s ease;
 
-                // button hover state
+                // button active state
                 &.active{
                     background: $text-light;
                     color: $text-dark;
-                    // border: 1px solid $text-dark;
-                    outline: 3px solid $text-dark;;
+                    outline: 3px solid $text-dark;
                     outline-offset: -6px;
-
                 }
-                // end of button hover state
+                // end of button active state
                 // button active state
                 &:active {
                     transition: .2s;
