@@ -177,7 +177,7 @@ body {
       outline-offset: -3px;
       margin: 1em 0 5vh;
       padding: 0 0 1em;
-      height: auto;
+      height: 12vh;
       overflow: hidden;
       transition: 1s;
       cursor: pointer;
@@ -185,7 +185,7 @@ body {
       isolation: isolate; }
       @media (max-width: 768px) {
         .container #item-grid .item {
-          height: auto; } }
+          height: 20vh; } }
       .container #item-grid .item::before {
         position: absolute;
         content: '';
@@ -221,6 +221,16 @@ body {
           color: #1b1b32;
           font-weight: 600;
           font-size: 2em; }
+        .container #item-grid .item .title::before {
+          content: '\f108';
+          opacity: 1; }
+        .container #item-grid .item .title::after {
+          content: '\f3cd';
+          opacity: 0;
+          font-size: 2em;
+          top: 1.3em;
+          left: 1.2em;
+          color: #fff; }
         @media (max-width: 768px) {
           .container #item-grid .item .title {
             text-align: left;
@@ -229,17 +239,11 @@ body {
               font-size: 1.5em;
               top: 2em;
               left: .5em;
-              transition: .2s ease; } }
-        .container #item-grid .item .title::before {
-          content: '\f108';
-          opacity: 1; }
-        .container #item-grid .item .title::after {
-          content: '\f3cd';
-          opacity: 0;
-          font-size: 1.6em;
-          top: 1.8em;
-          left: .6em;
-          color: #fff; }
+              transition: .2s ease; }
+            .container #item-grid .item .title::after {
+              font-size: 2em;
+              top: 1.6em;
+              left: .4em; } }
         .container #item-grid .item .title h2 {
           font-size: 1.4em;
           font-weight: 500; }
@@ -279,6 +283,11 @@ body {
             width: 100%;
             height: 100%;
             transition: .5s; }
+          @media (min-width: 768px) {
+            .container #item-grid .item .link figure {
+              height: 40vh; }
+              .container #item-grid .item .link figure img {
+                object-fit: contain; } }
       .container #item-grid .item:hover .title {
         background-color: #1b1b32;
         color: #fff; }
@@ -289,14 +298,25 @@ body {
         .container #item-grid .item:hover .title p {
           color: #fff; }
       .container #item-grid .item.active {
-        height: auto;
+        height: 70vh;
         transition: .5s ease; }
+        @media (max-width: 768px) {
+          .container #item-grid .item.active {
+            height: 50vh; } }
+        @media (max-width: 450px) {
+          .container #item-grid .item.active {
+            height: 60vh; } }
+        @media (max-width: 340px) {
+          .container #item-grid .item.active {
+            height: 70vh; } }
         .container #item-grid .item.active::before {
           opacity: 0; }
         .container #item-grid .item.active::after {
           opacity: 1; }
         .container #item-grid .item.active .title {
           background-color: #d0d0d5; }
+          .container #item-grid .item.active .title::before {
+            top: 1em; }
           .container #item-grid .item.active .title::after {
             color: #1b1b32; }
           .container #item-grid .item.active .title h2 {
@@ -308,7 +328,6 @@ body {
           transition: 1s;
           opacity: 1; }
           .container #item-grid .item.active .link figure {
-            height: auto;
             opacity: 1;
             transition-delay: .5s; }
           .container #item-grid .item.active .link a {
