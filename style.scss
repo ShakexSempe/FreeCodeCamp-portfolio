@@ -279,6 +279,9 @@ body {
             @media (max-width: 768px){
                 height: 20vh;
             }
+            @media (max-width: 330px){
+                height: 25vh;
+            }
             &::before {
                 position: absolute;
                 content: '';
@@ -302,7 +305,7 @@ body {
             }
             .title {
                 background: $background-light;
-                padding: 1em 0;
+                padding: 1em .5em 1em 0;
                 color: $text-dark;
                 transition: .5s ease;
                 text-transform: capitalize;
@@ -351,8 +354,8 @@ body {
                 
 
                 h2 {
-                    font-size: 1.4em;
-                    font-weight: 500;
+                    font-size: 1.25em;
+                    font-weight: 600;
                 }
 
                 p {
@@ -442,13 +445,13 @@ body {
             &.active {
                 height: 70vh;
                 @media (max-width: 768px) {
-                    height: 50vh;
-                }
-                @media (max-width: 450px){
                     height: 60vh;
                 }
+                @media (max-width: 450px){
+                    height: 65vh;
+                }
                 @media (max-width: 340px){
-                    height: 70vh;
+                    height: 75vh;
                 }
                 transition: .5s ease;
                 &::before {
