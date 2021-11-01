@@ -289,8 +289,8 @@ body {
         border: none;
         min-height: 100vh;
         overflow: hidden;
-        margin: 5vh 20vw;
-        padding: 1em 0;
+        margin: 5vh 23vw;
+        padding: 1em ;
         // background-color:$fcc-light;
         @media (max-width: 768px) {
             padding: 1em 0;
@@ -302,9 +302,9 @@ body {
             text-align:center;
             outline: 3px solid $fcc-dark;
             outline-offset: -3px;
-            margin: 1em 0 5vh;
+            margin: 1em 0 0em;
             padding: 0 0 1em;
-            height: 12vh;
+            height: 10vh;
             overflow: hidden;
             transition: 1s;
             cursor: pointer;
@@ -314,7 +314,7 @@ body {
                 height: 20vh;
             }
             @media (max-width: 330px){
-                height: 29vh;
+                height: 20vh;
             }
             &::before {
                 position: absolute;
@@ -338,12 +338,26 @@ body {
                 z-index: -1;
             }
             .title {
+                // desktop
+                @media (min-width: 1025px) {
+                    display: flex;
+                    align-items: center;
+                    height: 10vh;
+                }
+                // end of desktop
+                // small screens
+                @media (max-width: 330px) {
+                    align-items: center;
+                    height: 20vh;
+                }
+                // end of small screens
                 background: $background-light;
-                padding: 1em .5em 1em 0;
+                padding: .5em .5em 1em 15%;
                 color: $text-dark;
                 transition: .5s ease;
                 text-transform: capitalize;
                 line-height: 1.5;
+                text-align: left;
                 // title icon
                 &::after,
                 &::before {
@@ -364,11 +378,13 @@ body {
                     content: '\f3cd';
                     opacity: 0;
                     font-size: 2em;
-                    top: 1.3em;
+                    // top: 1.6em;
                     left: 1.2em;
-                    color: $text-light;
+                    color: $fcc-light;
                 }
-                @media (max-width: 768px) {
+                
+                // small screens
+                @media (max-width: 1024px) {
                     text-align:left;
                     padding-left: 20%;
 
@@ -385,6 +401,7 @@ body {
                         left: .4em;
                     }
                 }
+                // end of small screens
                 
 
                 h2 {
@@ -497,10 +514,11 @@ body {
                 .title {
                     background-color: $background-light;
                     &::before {
-                        top: 1em;
+                        top: 2em;
                     }
                     &::after {
                         color: $text-dark;
+                        top: 1.6em;
                     }
                     h2 {
                     color: $text-dark;
