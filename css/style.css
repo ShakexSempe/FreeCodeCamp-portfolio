@@ -223,7 +223,7 @@ body {
           height: 20vh; } }
       @media (max-width: 330px) {
         .container #item-grid .item {
-          height: 25vh; } }
+          height: 27vh; } }
       .container #item-grid .item::before {
         position: absolute;
         content: '';
