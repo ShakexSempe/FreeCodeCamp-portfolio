@@ -321,7 +321,8 @@ body {
               left: .4em; } }
         .container #item-grid .item .title h2 {
           font-size: 1.35em;
-          font-weight: 600; }
+          font-weight: 600;
+          line-height: 1; }
         .container #item-grid .item .title p {
           transition: .5s ease;
           color: #1b1b32;
