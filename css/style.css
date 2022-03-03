@@ -418,8 +418,9 @@ body {
     text-align: center;
     color: #0a0a23;
     font-weight: 500;
-    padding: 5vh 0;
-    text-transform: capitalize; }
+    padding: 5vh 0; }
+    .container footer p a {
+      text-decoration: none; }
     .container footer span {
       display: block;
       margin-top: .5em;

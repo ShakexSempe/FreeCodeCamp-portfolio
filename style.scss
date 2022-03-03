@@ -609,7 +609,13 @@ body {
         color: $text-gray;
         font-weight: 500;
         padding: 5vh 0;
-        text-transform: capitalize;
+
+        p{
+            a {
+                text-decoration: none;
+                color
+            }
+        }
 
         span {
             display: block;
